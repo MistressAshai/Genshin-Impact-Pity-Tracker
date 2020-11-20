@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; img-src 'self' https://i.lewds.moe">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'; img-src 'self' https://i.lewds.moe">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/background.css">
+    <title>Genshin Impact Pity Tracker</title>
+  </head>
+  <body>
+    <div id="titlebar">
+      <div id="drag-area">
+        <div id="window-title">
+          <span>Genshin Impact Pity Tracker</span>
+        </div>
+      </div>
+      <div id="window-controls">
+        <div class="titleBtn" id="min-button">
+          <img class="icon" srcset="icons/min-w-10.png 1x, icons/min-w-12.png 1.25x, icons/min-w-15.png 1.5x, icons/min-w-15.png 1.75x, icons/min-w-20.png 2x, icons/min-w-20.png 2.25x, icons/min-w-24.png 2.5x, icons/min-w-30.png 3x, icons/min-w-30.png 3.5x" draggable="false" />
+        </div>
+        <div class="titleBtn" id="max-button">
+          <img class="icon" srcset="icons/max-w-10.png 1x, icons/max-w-12.png 1.25x, icons/max-w-15.png 1.5x, icons/max-w-15.png 1.75x, icons/max-w-20.png 2x, icons/max-w-20.png 2.25x, icons/max-w-24.png 2.5x, icons/max-w-30.png 3x, icons/max-w-30.png 3.5x" draggable="false" />
+        </div>
+        <div class="titleBtn" id="restore-button">
+          <img class="icon" srcset="icons/restore-w-10.png 1x, icons/restore-w-12.png 1.25x, icons/restore-w-15.png 1.5x, icons/restore-w-15.png 1.75x, icons/restore-w-20.png 2x, icons/restore-w-20.png 2.25x, icons/restore-w-24.png 2.5x, icons/restore-w-30.png 3x, icons/restore-w-30.png 3.5x" draggable="false" />
+        </div>
+        <div class="titleBtn" id="close-button">
+          <img class="icon" srcset="icons/close-w-10.png 1x, icons/close-w-12.png 1.25x, icons/close-w-15.png 1.5x, icons/close-w-15.png 1.75x, icons/close-w-20.png 2x, icons/close-w-20.png 2.25x, icons/close-w-24.png 2.5x, icons/close-w-30.png 3x, icons/close-w-30.png 3.5x" draggable="false" />
+        </div>
+      </div>
+    </div>
+    <div class="no-select">
+      <img src="./assets/ui/wish.png">
+    </div>
+    <div id="wishDiv">
+      <select id="wishList">
+        <option value="permanent">Permanent Wish</option>
+        <option value="character">Character Event Wish</option>
+        <option id="novice" value="novice">Novice Wishes</option>
+        <option value="weapon">Weapon Event Wish</option>
+      </select>
+    </div>
+    <div>
+      Total rolls: <span id="current"></span><br>
+      Rolls until 4* pity: <span id="pity4"></span><br>
+      Rolls until 5* pity: <span id="pity5"></span><br>
+      4* Primogems: <span id="pity4primogems"></span><br>
+      5* Primogems: <span id="pity5primogems"></span><br>
+    </div>
+    <div class="buttons">
+      <div class="topButtons">
+        <button id="pity4Btn">4* Pity</button>
+        <button id="pity5Btn">5* Pity</button>
+        <button id="test">test</button>
+      </div>
+      <button id="rollBtn">Wish x1</button>
+      <button id="roll10Btn">Wish x10</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+    <div class="settings">
+      <input id="settingsBtn" type="image" draggable="false" src="./assets/ui/settings.png"/>
+    </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+    <script src="./usersettings.js"></script>
+    <script src="./rolls.js"></script>
+    <script src="./test.js"></script>
+  </body>
+</html>

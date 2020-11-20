@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; img-src 'self' https://i.lewds.moe">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'; img-src 'self' https://i.lewds.moe">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/background.css">
+    <title>Settings</title>
+  </head>
+  <body class="sucrose">
+    <div id="titlebar">
+      <div id="drag-area">
+        <div id="window-title">
+          <span>Settings</span>
+        </div>
+      </div>
+      <div id="window-controls">
+        <div class="titleBtn" id="close-button">
+          <img class="icon" srcset="icons/close-w-10.png 1x, icons/close-w-12.png 1.25x, icons/close-w-15.png 1.5x, icons/close-w-15.png 1.75x, icons/close-w-20.png 2x, icons/close-w-20.png 2.25x, icons/close-w-24.png 2.5x, icons/close-w-30.png 3x, icons/close-w-30.png 3.5x" draggable="false" />
+        </div>
+      </div>
+    </div>
+    Character
+    <div class="background-select-menu">
+      <select id="bgList">
+        <option value="aether">Aether</option>
+        <option value="amber">Amber</option>
+        <option value="barbara">Barbara</option>
+        <option value="beidou">Beidou</option>
+        <option value="bennett">Bennett</option>
+        <option value="chongyun">Chongyun</option>
+        <option value="diluc">Diluc</option>
+        <option value="fischl">Fischl</option>
+        <option value="jean">Jean</option>
+        <option value="kaeya">Kaeya</option>
+        <option value="keqing">Keqing</option>
+        <option value="klee">Klee</option>
+        <option value="lisa">Lisa</option>
+        <option value="lumine">Lumine</option>
+        <option value="mona">Mona</option>
+        <option value="ningguang">Ningguang</option>
+        <option value="noelle">Noelle</option>
+        <option value="paimon">Paimon</option>
+        <option value="qiqi">Qiqi</option>
+        <option value="razor">Razor</option>
+        <option value="sucrose">Sucrose</option>
+        <option value="tartaglia">Tartaglia</option>
+        <option value="venti">Venti</option>
+        <option value="xiangling">Xiangling</option>
+        <option value="xiao">Xiao</option>
+        <option value="xingqiu">Xingqiu</option>
+        <option value="none">None</option>
+      </select>
+    </div>
+    <br>
+    <div>
+      <label>Hide novice wish banner</label>
+      <input type="checkbox" id="noviceWishSetting">
+    </div>
+    <div id="wip">
+      <br><br><br><br>
+      Ongoing experiments...
+    </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="./settingsRenderer.js"></script>
+  </body>
+</html>

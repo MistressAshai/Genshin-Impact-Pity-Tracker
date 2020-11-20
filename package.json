@@ -1,0 +1,42 @@
+{
+  "name": "genshin-impact-pity-tracker",
+  "version": "1.0.0",
+  "author": "Ashai",
+  "description": "A tool to track how many rolls until your pity pull.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "devDependencies": {
+    "electron": "10.1.3",
+    "electron-builder": "^22.9.1"
+  },
+  "build": {
+    "appId": "idk",
+    "productName": "PityTracker",
+    "win": {
+      "icon": "icon.png",
+      "target": "zip",
+      "files": [
+        "**/*",
+        "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+        "!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}",
+        "!**/node_modules/*.d.ts",
+        "!**/node_modules/.bin",
+        "!**/*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj,scss,css.map,exe}",
+        "!.editorconfig",
+        "!**/._*",
+        "!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,.gitignore,.gitattributes}",
+        "!**/{__pycache__,thumbs.db,.flowconfig,.idea,.vs,.nyc_output}",
+        "!**/{appveyor.yml,.travis.yml,circle.yml}",
+        "!**/{npm-debug.log,yarn.lock,.yarn-integrity,.yarn-metadata.json}",
+        "!{package.json,package-lock.json}",
+        "!**/.vscode",
+        "!icon.ico"
+      ]
+    }
+  }
+}

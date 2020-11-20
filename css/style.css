@@ -1,0 +1,233 @@
+@font-face {
+  font-family: "Genshin";
+  src: url(../assets/ui/zh-cn.ttf);
+}
+
+body {
+  color: #D3BC8E;
+  background-color: #1C1C22;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Genshin", serif;
+  padding-top: 36px;
+  overflow: hidden;
+}
+
+#titlebar {
+  height: 32px;
+  width: 100%;
+  background-color: #24242b;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+}
+
+#drag-area {
+  -webkit-app-region: drag;
+  --webkit-user-select: none;
+  user-select: none;
+  width: 99%;
+  height: 27px;
+  margin-left: 4px;
+}
+
+#window-title {
+  margin-top: 5px;
+  margin-left: 8px;
+  overflow: hidden;
+}
+
+#window-title span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.5;
+}
+
+.maximized #titlebar {
+  width: 100%;
+  padding: 0;
+}
+
+.maximized #window-title {
+  margin-left: 12px;
+}
+
+.maximized #restore-button {
+  display: flex !important;
+}
+
+.maximized #max-button {
+  display: none;
+}
+
+#window-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 46px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+#window-controls .titleBtn {
+  grid-row: 1 / span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  -webkit-app-region: no-drag;
+}
+#window-controls .titleBtn:hover {
+  background: rgba(255,255,255,0.1);
+}
+#window-controls .titleBtn:active {
+  background: rgba(255,255,255,0.2);
+}
+#close-button:hover {
+  background: #f04747 !important;
+}
+#close-button:active {
+  background: #eb5f5f !important;
+}
+#close-button:active .icon {
+  filter: invert(1);
+}
+#restore-button {
+  display: none !important;
+}
+#min-button {
+  grid-column: 1;
+}
+#max-button, #restore-button {
+  grid-column: 2;
+}
+#close-button {
+  grid-column: 3;
+}
+
+@media (-webkit-device-pixel-ratio: 1.5), (device-pixel-ratio: 1.5),
+(-webkit-device-pixel-ratio: 2), (device-pixel-ratio: 2),
+(-webkit-device-pixel-ratio: 3), (device-pixel-ratio: 3) {
+  #window-controls .icon {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+button {
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  background-color: #E4E0D5;
+  color: #B4A08C;
+  border-color: #DCC78E;
+  border-radius: 13px;
+  border-style: solid;
+  outline: none;
+  font-family: "Genshin";
+  width: 142.28px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: .3;
+  cursor: default;
+}
+
+button:active {
+  opacity: .9;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.buttons {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding-top: 8px;
+}
+
+.topButtons {
+  padding-bottom: 10px;
+}
+
+.no-select {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.settings {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#settingsBtn {
+  outline: none;
+}
+
+#settingsBtn:active {
+  opacity: .9;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+#wishList {
+  background-color: #DBD7D3;
+  color: #757575;
+  font-family: Helvetica, sans-serif;
+  outline: none;
+  border-color: #B5B2AE;
+  border-style: solid;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 5px 2px;
+  cursor: pointer;
+}
+
+#wishDiv {
+  padding-bottom: 6px;
+}
+
+#wip {
+  display: grid;
+  place-items: center;
+}
+
+.background-select-menu {
+  padding-bottom: 6px;
+}
+
+#bgList {
+  background-color: #DBD7D3;
+  color: #757575;
+  font-family: Helvetica, sans-serif;
+  outline: none;
+  border-color: #B5B2AE;
+  border-style: solid;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 5px 2px;
+  cursor: pointer;
+  width: 185px;
+}
